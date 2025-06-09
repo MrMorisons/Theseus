@@ -1315,6 +1315,159 @@
 				)
 			)
 		)
+		(symbol "Sensor_Temperature:TMP36xS"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -8.89 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TMP36xS"
+				(at 6.35 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+				(at 0 -11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Low Voltage Temperature Sensor, SOIC-8"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Temperature Sensor SOIC-8"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOIC?8*3.9x4.9mm*P1.27mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TMP36xS_0_1"
+				(rectangle
+					(start -10.16 7.62)
+					(end 10.16 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TMP36xS_1_1"
+				(pin output line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "V_{OUT}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 0 0)
+					(length 2.54)
+					(name "~{SHUTDOWN}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 10.16 270)
+					(length 2.54)
+					(name "+Vs"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 76.2 113.03)
@@ -1327,6 +1480,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "14d87f12-a551-4fec-941a-147df566e9f6")
+	)
+	(junction
+		(at 111.76 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "61512260-45c8-4805-9430-fb62f04cada1")
 	)
 	(junction
 		(at 57.15 113.03)
@@ -1345,6 +1504,10 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b2833fef-c3de-435e-ae4b-074d5ab1143e")
+	)
+	(no_connect
+		(at 168.91 77.47)
+		(uuid "4de421ef-0e5b-45ed-80ae-3ac601c1916b")
 	)
 	(wire
 		(pts
@@ -1365,6 +1528,36 @@
 			(type default)
 		)
 		(uuid "1c187c93-2079-45cb-9bf9-945da3e26b27")
+	)
+	(wire
+		(pts
+			(xy 143.51 77.47) (xy 127 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c35cc11-25bf-4dca-9fc9-bbf6d02b0613")
+	)
+	(wire
+		(pts
+			(xy 156.21 113.03) (xy 111.76 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "316ac7eb-909b-4b7f-8ef6-99390604b573")
+	)
+	(wire
+		(pts
+			(xy 95.25 41.91) (xy 95.25 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32ec4a2e-75eb-45c5-8088-03ee8a1254b8")
 	)
 	(wire
 		(pts
@@ -1418,6 +1611,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 67.31) (xy 156.21 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fdd00f7-4ab0-4556-b344-d8208ff924f5")
+	)
+	(wire
+		(pts
 			(xy 34.29 46.99) (xy 41.91 46.99)
 		)
 		(stroke
@@ -1455,6 +1658,16 @@
 			(type default)
 		)
 		(uuid "6c3e3b7f-e905-4fc6-a132-2ac81745a458")
+	)
+	(wire
+		(pts
+			(xy 156.21 41.91) (xy 95.25 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e084666-587c-4083-ad9b-af32426cdf93")
 	)
 	(wire
 		(pts
@@ -1508,6 +1721,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 87.63) (xy 156.21 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86136e45-d318-489d-b691-32780481cef7")
+	)
+	(wire
+		(pts
 			(xy 119.38 46.99) (xy 119.38 52.07)
 		)
 		(stroke
@@ -1525,6 +1748,16 @@
 			(type default)
 		)
 		(uuid "93592e58-9e0e-4416-8fd1-8e39f1f3606c")
+	)
+	(wire
+		(pts
+			(xy 95.25 87.63) (xy 101.6 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a423feb8-ebe0-43d6-92fd-b2dc4ceead42")
 	)
 	(wire
 		(pts
@@ -2048,6 +2281,81 @@
 			(project ""
 				(path "/6b9ee11d-d47e-4406-8385-2be27b409e2d"
 					(reference "DS1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Temperature:TMP36xS")
+		(at 156.21 77.47 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b1fe03b3-703c-487c-9c98-ca641cb8d0d8")
+		(property "Reference" "U1"
+			(at 171.45 71.1514 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TMP36xS"
+			(at 171.45 73.6914 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 156.21 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf"
+			(at 156.21 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Low Voltage Temperature Sensor, SOIC-8"
+			(at 156.21 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3066e624-1eb6-48f5-a556-f118597298b6")
+		)
+		(pin "5"
+			(uuid "7e45ec92-c131-46b4-b527-0558e4554d86")
+		)
+		(pin "4"
+			(uuid "d82643b3-9842-4eff-90f9-f77a31709034")
+		)
+		(pin "8"
+			(uuid "d67844b9-abad-446c-bf6f-017505e7ee68")
+		)
+		(instances
+			(project ""
+				(path "/6b9ee11d-d47e-4406-8385-2be27b409e2d"
+					(reference "U1")
 					(unit 1)
 				)
 			)
